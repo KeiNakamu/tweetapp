@@ -10,12 +10,13 @@ header {
      font-size: 22px;
    }
 
-/* body { */
+body {
+     background-color: #44FFFF;
      /* margin: 0; */
-   /* } */
+   }
 
 .container {
-     background-color: #44FFFF;
+     /* background-color: #44FFFF; */
      position: absolute;
      top: 25%;
      left: 50%;
