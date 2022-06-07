@@ -6,6 +6,6 @@
   <p>本文:<%= @post.content %></p>
   <%= form.submit  "つぶやく" %>
 
-  <%= form.submit "戻る" %>
+  <%= link_to '一覧画面に戻る', posts_path %>
 
 <% end %>
