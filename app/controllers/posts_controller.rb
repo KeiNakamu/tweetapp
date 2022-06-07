@@ -8,17 +8,24 @@ class PostsController < ApplicationController
   end
 
   def create
-      @post = Post.new(post_params)
-      if params[:back]
-        render :new
-      else
-        if @post.save
-          redirect_to posts_path, notice: "つぶやきました！"
-        else
-          render :new
-        end
-      end
-    end
+    Post.create(post_params)
+      redirect_to new_post_path
+
+      # @post = Post.new(post_params)
+      # if params[:back]
+      #   render :new
+      # else
+      #   if @post.save
+      #     redirect_to posts_path, notice: "つぶやきました！"
+      #   else
+      #     render :new
+      #   end
+      # end
+  end
+
+  def show
+    
+  end
 
     private
 
