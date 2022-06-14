@@ -5,11 +5,13 @@
 <table>
   <tr>
     <th>ゆんたく内容</th>
+    <th>名前</th>
   </tr>
 
 <% @posts.each do |post| %>
   <tr>
     <td><%= post.content %></td>
+    <td><%= post.user.name %></td>
 
     <td><%= link_to '詳細', post_path(post.id) %></td>
     <td><%= link_to "編集", edit_post_path(post.id) %></td>
