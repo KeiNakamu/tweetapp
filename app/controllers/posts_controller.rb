@@ -22,7 +22,7 @@ class PostsController < ApplicationController
   end
 
   def show
-    @post = Post.find(params[:id])
+    @favorite = current_user.favorites.find_by(post_id: @post.id)
   end
 
   def edit
